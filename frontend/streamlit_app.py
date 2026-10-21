@@ -3,7 +3,10 @@ import requests
 import streamlit as st
 
 st.set_page_config(page_title="ChurnIQ", page_icon="📊", layout="wide")
-API_URL = os.getenv("CHURN_API_URL", "http://127.0.0.1:8000").rstrip("/")
+API_URL = os.getenv(
+    "CHURN_API_URL",
+    "https://telco-churn-api-ky4r.onrender.com",
+).rstrip("/")
 api_health = {}
 
 st.markdown("""
@@ -17,11 +20,13 @@ html,body,[class*="css"]{font-family:'DM Sans',sans-serif}
 .hero h1{font-family:Manrope,sans-serif;color:#f4f7ff;font-size:2.2rem;margin:.4rem 0}
 .hero p,.muted{color:#b6c4dc}
 .section{font-family:Manrope,sans-serif;font-size:1.2rem;font-weight:800;margin:.5rem 0}
-.metric,.result{background:#131d31;border:1px solid #293750;border-radius:16px;padding:1rem}
-.metric{min-height:95px}.metric-label{color:#9eacc5;font-size:.8rem}
+.metric,.result{background:#131d31;border:1px solid #293750;border-radius:16px;padding:1rem;box-sizing:border-box}
+.metric{min-height:95px;height:100%;margin-bottom:.75rem}.metric-label{color:#9eacc5;font-size:.8rem}
 .metric-value{font-family:Manrope,sans-serif;color:#f4f7ff;font-size:1.7rem;font-weight:800}
 div[data-testid="stForm"]{background:#111a2c;border:1px solid #293750;border-radius:16px;padding:1.2rem}
 div[data-testid="stFormSubmitButton"] button{border-radius:10px;min-height:2.8rem;font-weight:700}
+div[data-testid="stAlert"]{margin-top:.5rem;margin-bottom:1.5rem;border-radius:12px}
+div[data-testid="stHorizontalBlock"]{align-items:stretch}
 </style>
 """, unsafe_allow_html=True)
 

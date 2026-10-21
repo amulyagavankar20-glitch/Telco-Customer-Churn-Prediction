@@ -21,7 +21,7 @@ cd C:\Amulya\Projects\Telco-Customer-Churn
 streamlit run frontend\streamlit_app.py
 ```
 
-The frontend defaults to `http://127.0.0.1:8000`. For a separately deployed backend:
+The frontend defaults to the deployed backend at `https://telco-churn-api-ky4r.onrender.com`. For local development or a separately deployed backend:
 
 ```powershell
 $env:CHURN_API_URL = "https://your-api.example.com"
@@ -44,4 +44,3 @@ The API is the source of truth for model predictions and evaluation values shown
 - Sends form data to `/predict` with a timeout.
 - Handles validation errors, unavailable backends, timeouts, and other request failures visibly.
 - Displays probability, risk classification, and the active decision threshold.
-
