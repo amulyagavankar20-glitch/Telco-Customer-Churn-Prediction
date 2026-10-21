@@ -1,0 +1,48 @@
+{
+  "selected_model": "Logistic Regression",
+  "decision_threshold": 0.5409749096353025,
+  "random_state": 42,
+  "dataset_rows": 7043,
+  "dataset_features_before_engineering": 20,
+  "numeric_features": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "TotalServices",
+    "AvgMonthlySpend"
+  ],
+  "categorical_features": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ],
+  "test_metrics_tuned_threshold": {
+    "setting": "Validation-tuned threshold",
+    "threshold": 0.5409749096353025,
+    "accuracy": 0.7625354777672658,
+    "precision": 0.538659793814433,
+    "recall": 0.7437722419928826,
+    "f1": 0.624813153961136,
+    "roc_auc": 0.8446866859889203,
+    "pr_auc": 0.6576695292591627,
+    "brier_score": 0.1629285248354383
+  },
+  "versions": {
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "xgboost": "3.2.0"
+  }
+}
